@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+/* 
+## Colors
+
+### Primary
+
+#### Text
+
+- Pale Violet (sub-heading at the top of the app UI): hsl(276, 100%, 81%)
+- Moderate Violet (chat on the left): hsl(276, 55%, 52%)
+- Desaturated Dark Violet (chat on the right): hsl(271, 15%, 43%)
+- Grayish Blue (placeholder text): hsl(206, 6%, 79%)
+- Very Dark Desaturated Violet (main heading): hsl(271, 36%, 24%)
+- Dark Grayish Violet (paragraph): hsl(270, 7%, 64%)
+
+#### Gradients
+
+These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:
+
+- Light Magenta: hsl(293, 100%, 63%)
+- Light Violet: hsl(264, 100%, 61%)
+
+### Secondary
+
+- White: hsl(0, 0%, 100%)
+- Light Grayish Violet (app background): hsl(270, 20%, 96%)
+- Very Dark Desaturated Violet (submit button background): hsl(271, 36%, 24%)
+- Very Light Magenta (radio button outline): hsl(289, 100%, 72%)
+ */
+
+ :root{
+    --pale-violet: hsl(276, 100%, 81%);
+    --moderate-violate: hsl(276, 55%, 52%);
+    --desaturated-dark-violate:hsl(271, 15%, 43%);
+    --grayish-blue:hsl(206, 6%, 79%);
+    --very-dark-desaturated-violate:hsl(271, 36%, 24%);
+    --very-grayish-violate:hsl(270, 7%, 64%);
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violate:hsl(264, 100%, 61%);
+    --light-grayish-violate:hsl(270, 20%, 96%);
+    --very-dark-desaturated-violet:hsl(271, 36%, 24%);
+    --very-light-magenta:hsl(289, 100%, 72%);
+
+ }
+
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+ body{
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    position: relative;
+ }
+ body .bk-grounds{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+ }
+ body .bk-grounds .bk-ground1{
+    height: 580px;
+    width: 350px;
+    background:linear-gradient(to bottom,hsl(293, 100%, 63%)10%,hsl(264, 100%, 61%));
+    position: fixed;
+    top: 0;
+    left: -10px;
+    border-bottom-left-radius: 170px;;
+    border-bottom-right-radius: 170px;;
+ }
+ body .bk-grounds .bk-ground2{
+    height: 580px;
+    width: 350px;
+    background-color:var(--light-grayish-violate);
+    position: fixed;
+    bottom: 0;
+    right: -10px;
+    border-top-left-radius: 180px;
+    border-top-right-radius: 180px;
+ }
+ body .container{
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:800px; 
+  
+ }
+ body .container .mobile{
+   position: relative;
+    height: 440px;
+    background-color: var(--light-grayish-violate);
+    width: 220px;
+    padding: 20px;
+    border: 8px solid white;
+    border-radius: 20px;
+    box-shadow:0 0 25px 0 rgba(34, 32, 32, 0.164) ;
+ }
+ body .container .mobile .profile .per-info img{
+    width:25px;
+    border: 1px solid white;
+    border-radius: 50%;
+    
+ }
+ body .container .mobile .top{
+    height: 26px;
+    background-color: white;
+    width: 120px;
+    border-radius: 20px;
+    position: absolute;
+    top: -3px;
+    left: 50px;
+    z-index: 12;
+ }
+ body .container .mobile .profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 60px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background:linear-gradient(to right,hsl(264, 100%, 61%)30%,hsl(293, 100%, 63%)) ;
+    padding-top: 10px;
+    width: 203px;
+    z-index: 1;
+ }
+ body .container .mobile  .per-info{
+    display: flex;
+    align-items: center;
+    margin-left: -50px;
+ }
+ body .container .mobile i{
+   color: white;
+   font-size: 10px;
+ }
+ body .container .mobile .left{
+   margin-left: 10px;
+ }
+ body .container .mobile .ellips{
+   margin-right: 15px;
+ }
+ body .container .mobile .profile .per-info p{
+    font-size: 10px;
+    color: white;
+    font-weight: 500;
+    margin-left: 10px;
+ }
+ body .container .mobile .profile .per-info .p{
+    margin-top:2px ;
+    font-size: 8px;
+    color:var(--grayish-blue) ;
+ }
+ body .container .mobile .con-1{
+
+    position: absolute;
+    top: 65px;
+    left: 5px;
+   
+ }
+ body .container .mobile .con-1 p{
+    width: 110px;
+    font-size: 7px;
+    line-height: 10px;
+    color: var(--moderate-violate);
+    background-color: hsl(270, 46%, 90%);
+    margin-bottom: 4px;
+    padding: 4px;
+    border-top-left-radius:10px ;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 10px;
+ }
+ body .container .mobile .con-2{
+ 
+    position: relative;
+    top: 115px;
+    right: -17px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+ }
+ body .container .mobile .con-2 picture img{
+    width: 40px ;
+    border-radius: 5px;
+ 
+ }
+ body .container .mobile .con-2 p{
+    background-color: white;
+    font-size: 9px;
+    padding: 10px;
+    margin: 4px 0;
+    color: var(--very-dark-desaturated-violate);
+    border-top-left-radius:10px ;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 4px;
+ }
+ body .container .mobile .con-3 {
+ 
+    position: absolute;
+    top: 270px;
+    left: 5px;
+    
+ }
+ body .container .mobile .con-3 p{
+    width: 110px;
+    font-size: 7px;
+    line-height: 10px;
+    color: var(--moderate-violate);
+    background-color: hsl(270, 46%, 90%);
+    margin-bottom: 4px;
+    padding: 4px;
+    border-top-left-radius:10px ;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 10px;
+ }
+ body .container .mobile .con-3 .circle{
+   height: 30px;
+   width: 130px;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   margin: 5px 0;
+   background: linear-gradient(to right,hsl(293, 100%, 63%),hsla(264, 100%, 61%, 0.829)60%);
+   border-top-left-radius:10px ;
+   border-top-right-radius: 10px;
+   border-bottom-left-radius: 4px;
+   border-bottom-right-radius: 10px;
+ }
+ body .container .mobile .con-3 .circle .time{
+   display: flex;
+
+ }
+ body .container .mobile .con-3 .circle .time span{
+   margin-left: 5px;
+ }
+ body .container .mobile .con-3 .circle .time .cir{
+   margin-left: -9px;
+ }
+ body .container .mobile .con-3 .circle .time span{
+   font-size: 8px;
+   color: white;
+ }
+ body .container .mobile .con-3 .circle span{
+   display: inline-block;
+   font-size: 9px;
+ }
+ body .container .mobile .con-3 .circle .money{
+   font-size: 12px;
+   font-weight: 500;
+   color: white;
+ }
+ body .container .mobile .con-3 .circle .m4{
+   margin-right: -10px;
+ }
+ body .container .mobile .con-4{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: absolute;
+   height: 35px;
+   left: 5px;
+   top: 385px;
+   background-color:white;
+   border-radius: 20px;
+   width: 190px;
+ }
+ body .container .mobile .con-4 p{
+   font-size: 9px;
+   margin-left: 20px;
+   color: var(--grayish-blue);
+ }
+ body .container .mobile .con-4 i{
+   margin-right: 5px;
+   background: var(--very-dark-desaturated-violate);
+   padding: 5px 8px;
+   border-radius: 50%;
+   font-size: 13px;
+ }
+
+
+ body .container .content{
+    width: 400px;
+ }
+ body .container .content h1{
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-size: 30px;
+    color: var(--very-dark-desaturated-violate);
+ }
+ body .container .content p{
+    font-size: 14px;
+    
+    color: var(--grayish-blue);
+    line-height: 25px;
+ }
+
+ @media(max-width:500px){
+   body{
+      overflow-x: hidden;
+      height: 100vh;
+      position: relative;
+   }
+   body .bk-grounds .bk-ground1{
+      width: 250px;
+      height: 400px;
+      position: fixed;
+      top: 0;
+      left: -50px;
+   }
+   body .bk-grounds .bk-ground2{
+      
+      width: 250px;
+      height: 400px;
+      position: fixed;
+      bottom: 0;
+      right: 100px;
+   }
+   body .container{
+      
+      display: flex;
+      flex-direction: column;
+      height: 740px;
+      position: absolute;
+      top: 400px;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      
+   }
+  
+
+   body .container .content{
+      text-align: center;
+      width: 300px;
+   }
+   body .container .content p{
+      text-align: center;
+      font-size: 16px;
+ 
+   }
+ }
